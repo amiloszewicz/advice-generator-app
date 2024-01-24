@@ -5,13 +5,7 @@ import { RouterOutlet } from '@angular/router';
   selector: 'app-root',
   standalone: true,
   imports: [RouterOutlet],
-  template: `
-    <h1>Welcome to {{title}}!</h1>
-
-    <router-outlet />
-  `,
-  styleUrl: './app.component.scss'
+  template: ` <router-outlet /> `,
+  styleUrl: './app.component.scss',
 })
-export class AppComponent {
-  title = 'advice-generator-app';
-}
+export class AppComponent {}
