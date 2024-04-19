@@ -1,16 +1,21 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
+import { AdviceslipService } from './data-access/adviceslip.service';
+import { AdviceCardComponent } from './ui/advice-card/advice-card.component';
 
 @Component({
   selector: 'app-generator',
   standalone: true,
-  imports: [],
+  imports: [AdviceCardComponent],
   template: `
-    <p>
-      generator works!
-    </p>
+    <app-advice-card
+      [advice]="adviceslipService.advice()"
+      (generate)=""
+    ></app-advice-card>
   `,
-  styles: ``
+  styles: ``,
 })
 export class GeneratorComponent {
+  adviceslipService = inject(AdviceslipService);
 
+  constructor() {}
 }
