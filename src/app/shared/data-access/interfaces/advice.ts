@@ -1,6 +1,6 @@
 export interface Advice {
   name: string | null;
-  number: number;
+  number: number | null;
 }
 
 export interface AdviceSlipResponse {
